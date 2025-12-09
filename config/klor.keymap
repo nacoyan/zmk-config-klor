@@ -36,7 +36,6 @@
 #define TAP    8
 #define EXTRA  9
 
-
 / {
 
     behaviors {
@@ -282,19 +281,19 @@ label= "BUTTON"                                                ;
 label= "TAP"							;
 // └───────────────────────────────────────────────────────────┘
 /*           ┌─────────┬─────────┬─────────┬─────────┬─────────┐                    ┌─────────┬─────────┬─────────┬─────────┬─────────┐
-             │    Q    │    W    │    F    │    P    │    B    │                    │    J    │    U    │    L    │    Y    │    '    │   
+             │    Q    │    W    │    E    │    R    │    T    │                    │    Y    │    U    │    I    │    O    │    P    │   
    ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤                    ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐
-   │   TAB   │   A/SU  │   R/ALT │  S/CTRL │  T/SHFT │    G    │                    │    M    │  N/SHFT │ E/CTRL  │  I/ALT  │  O/SU   │   CTRL  │
+   │   TAB   │	  A    │    S    │    D    │    F    │    G    │                    │    H    │    J    │    K    │    L    │    :    │   CTRL  │
    ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤╭────────╮╭────────╮├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
-   │   CTRL  │    Z    │    X    │    C    │    D    │    V    ││  MUTE  ││PLY/PSE ││    K    │    H    │    ,    │    .    │    /    │   ALT   │
+   │   CTRL  │    Z    │    X    │    C    │    V    │    B    ││  MUTE  ││PLY/PSE ││    N    │    M    │    ,    │    .    │ //BUTTON│   ALT   │
    └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┼╰────────╯╰────────╯┼─────────┼─────────┼─────────┼─────────┴─────────┴─────────┘
                                  │   ESC/Me│ SPACE/Na│   TAB/Mo│   ALT   ││ CMD/WIN │  ENTER/S│  BSPC/Nu│   DEL/F │  
                                  └─────────┴─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┴─────────┘ */ 
  bindings = <
  //╷         ╷         ╷         ╷         ╷         ╷         ╷         ╷╷         ╷         ╷         ╷         ╷         ╷         ╷         ╷ 
-              &kp Q     &kp W     &kp F     &kp P     &kp B                          &kp J     &kp U     &kp L     &kp Y     &kp SQT
-   &kp TAB  &hm LGUI A &hm LALT R &hm LCTRL S &hm LSHFT T &kp G                      &kp M     &hm RSHFT N &hm RCTRL E &hm RALT I &hm RGUI O &kp RCTRL
-&kp LCTRL &hml BUTTON Z &kp X     &kp C     &kp D     &kp V     &trans     &trans    &kp K     &kp H     &kp COMMA &kp DOT   &hml BUTTON FSLH  &kp RALT
+              &kp Q     &kp W     &kp E     &kp R     &kp T                          &kp Y     &kp U     &kp I     &kp O     &kp P
+   &kp TAB    &kp A 	&kp S 	  &kp D     &kp F     &kp G                          &kp H     &kp J 	 &kp K 	   &kp L     &kp SEMI	&kp RCTRL
+   &kp LCTRL  &kp Z 	&kp X     &kp C     &kp D     &kp B     &trans     &trans    &kp N     &kp M     &kp COMMA &kp DOT   &hml BUTTON FSLH  &kp RALT
               &hml MEDIA LCTRL &hml NAV SPACE &hml MOUSE TAB 	&kp LALT   &kp LGUI  &hml SYM RET &hml NUM BSPC  &hml FUN DEL    
                         >;
 //            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -305,19 +304,19 @@ label= "TAP"							;
 label= "EXTRA"                                                ;
 // └───────────────────────────────────────────────────────────┘
 /*           ┌─────────┬─────────┬─────────┬─────────┬─────────┐                    ┌─────────┬─────────┬─────────┬─────────┬─────────┐
-             │    Q    │    W    │    F    │    P    │    J    │                    │    B    │    L    │    U    │    Y    │    '    │   
+             │    F    │    W    │    Q    │    P    │    J    │                    │    B    │    L    │    U    │    Y    │    '    │   
    ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤                    ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐
-   │   TAB   │   A/SU  │   R/ALT │  S/CTRL │  T/SHFT │    G    │                    │    M    │  N/SHFT │ E/CTRL  │  I/ALT  │  O/SU   │   CTRL  │
+   │   TAB   │   S/SU  │   A/ALT │  R/CTRL │  T/SHFT │    G    │                    │    M    │  N/SHFT │ E/CTRL  │  I/ALT  │  O/SU   │   CTRL  │
    ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤╭────────╮╭────────╮├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
-   │   CTRL  │    Z    │    X    │    C    │    D    │    V    ││  MUTE  ││PLY/PSE ││    K    │    H    │    ,    │    .    │    /    │   ALT   │
+   │   CTRL  │    Z    │    X    │    C    │    D    │    V    ││  MUTE  ││PLY/PSE ││    K    │    H    │    ,    │    .    │ //BUTTON│   ALT   │
    └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┼╰────────╯╰────────╯┼─────────┼─────────┼─────────┼─────────┴─────────┴─────────┘
                                  │   ESC/Me│ SPACE/Na│   TAB/Mo│   ALT   ││ CMD/WIN │  ENTER/S│  BSPC/Nu│   DEL/F │  
                                  └─────────┴─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┴─────────┘ */ 
  bindings = <
  //╷         ╷         ╷         ╷         ╷         ╷         ╷         ╷╷         ╷         ╷         ╷         ╷         ╷         ╷         ╷ 
-              &kp Q     &kp W     &kp F     &kp P     &kp J                          &kp B     &kp L     &kp U     &kp Y     &kp SQT
-   &kp TAB  &hm LGUI A &hm LALT R &hm LCTRL S &hm LSHFT T &kp G                      &kp M     &hm RSHFT N &hm RCTRL E &hm RALT I &hm RGUI O &kp RCTRL
-&kp LCTRL &hml BUTTON Z &kp X     &kp C     &kp D     &kp V     &trans     &trans    &kp K     &kp H     &kp COMMA &kp DOT   &hml BUTTON FSLH  &kp RALT
+              &kp F     &kp W     &kp Q     &kp P     &kp J                          &kp B     &kp L     &kp U     &kp Y     &kp SQT
+   &kp TAB  &hm LGUI S &hm LALT A &hm LCTRL R &hm LSHFT T &kp G                      &kp M     &hm RSHFT N &hm RCTRL E &hm RALT I &hm RGUI O &kp RCTRL
+&kp LCTRL &hml BUTTON C &kp X     &kp Z     &kp D     &kp V     &trans     &trans    &kp K     &kp H     &kp COMMA &kp DOT   &hml BUTTON FSLH  &kp RALT
               &hml MEDIA LCTRL &hml NAV SPACE &hml MOUSE TAB 	&kp LALT   &kp LGUI  &hml SYM RET &hml NUM BSPC  &hml FUN DEL    
                       >;
 //            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
